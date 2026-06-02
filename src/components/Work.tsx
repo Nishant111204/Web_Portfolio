@@ -3,6 +3,7 @@ import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { assetPath } from "../utils/assetPath";
 
 gsap.registerPlugin(useGSAP);
 
@@ -110,7 +111,7 @@ const Work = () => {
                 <h4>{project.tools}</h4>
                 <p>{project.features}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
+              <WorkImage image={assetPath("images/placeholder.webp")} alt="" />
             </div>
           ))}
         </div>
@@ -120,4 +121,3 @@ const Work = () => {
 };
 
 export default Work;
-
